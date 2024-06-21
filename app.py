@@ -59,7 +59,7 @@ def main():
         if pos == "Yes":
             visualize_parser(user_input_2)
 
-            response_recommendation = model.generate_content(f"Recommend {recommendation} another ways to write this text: {user_input}. Don't format anything.")
+            response_recommendation = model.generate_content(f"Recommend {recommendation} another ways to write this text: {user_input}. Don't format anything. Format by 1 2 3 ... and downline each way.")
             response_translate = model.generate_content(f"Translate {user_input} to vietnamese please. Don't format anything.")
 
             st.markdown("## Translate to vietnamese:")
@@ -68,7 +68,7 @@ def main():
             st.markdown(f"## {recommendation} ways to write this text:")
             st.write(response_recommendation.text)
         else:
-            response_recommendation = model.generate_content(f"Recommend {recommendation} another ways to write this text: {user_input}. Don't format anything.")
+            response_recommendation = model.generate_content(f"Recommend {recommendation} another ways to write this text: {user_input}. Don't format anything. Format by 1 2 3 ... and downline each way.")
             response_translate = model.generate_content(f"Translate {user_input} to vietnamese please. Don't format anything.")
 
             st.markdown("## Translation:")
